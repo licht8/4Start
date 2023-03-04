@@ -8,7 +8,7 @@
 - Also installing another utilities like VPN, Webmin, etc.
 
  "Support" uses for links, books, articles and other things which can help
- in administration of a server
+ in administration of a server.
 
- "WireGuard-scripts" as you can understand uses for WG scripts and other 
+ "WireGuard-scripts" as you can understand uses for WG scripts and other
  things for handle it.
