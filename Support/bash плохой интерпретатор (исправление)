@@ -1,0 +1,7 @@
+Script execution error: -bash: ./start.sh: / bin / bash ^ M: bad interpreter: no such file or directory
+This is because the format of the Windows start script is not supported in the Linux environment.
+
+1) Open the script in vim editor 
+	# vi script.sh
+
+2) Enter edit mode and Esc + :set ff=unix
