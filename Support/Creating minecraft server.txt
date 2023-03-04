@@ -1,0 +1,50 @@
+1) Install the necessary utilities and repositories.
+ # yum install -y epel-release (repository with epel programs)
+ # yum install net-tools -y (network tools)
+ # yum install screen -y (virtual terminal - required for a mintcraft server)
+ # yum install htop atop -y (program managers)
+
+---------------------
+Disabling SELinux
+ 
+ # mkdir /root/temp && cd /root/temp && wget https://www.dropbox.com/s/o87peg93xudgq2i/selinux-disable.sh && chmod 700 /root/temp/selinux-disable.sh && ./selinux-disable.sh
+---------------------
+
+---------------------
+Opening ports
+
+ # firewall-cmd --permanent --add-port=25565/tcp
+ # firewall-cmd --reload
+---------------------
+
+2) Create a separate user for the mancraft server - mcs (minecraft server)
+ # useradd mcs (create a user to work with the minecraft server)
+ # passwd mcs (set and repeat password)
+ # su mcs (switch from root to mcs without a password)
+  
+		login: mcs
+		pass: mineserver21
+
+3) Download the core of the server and put it in the user folder.
+   The site where you can download the kernel for 1.17.1:
+	# https://www.minecraft.net/ru-ru/download/server
+   The command to start the server: 
+	# java -Xmx1024M -Xms1024M -jar server.jar nogui
+
+3.1) Open the file eula (Conf.)
+	# vi eula.txt
+     and change "false" to "true" for "eula=true". Save it.
+
+4) creation of the screen of mcdr:
+	# screen -S "mcserver"
+   exit the screen CTRL + A + D
+   go back in 
+ 	# screen -r
+ After entering the screen, start the servicemate with the command: 
+	# java -Xmx1024M -Xms1024M -jar server.jar nogui
+
+-------------------------------------
+Error: session not allowed
+1) Open server.properties
+	# vi server.properties
+2) find the line "online-mode=false" and change the value to "true"
