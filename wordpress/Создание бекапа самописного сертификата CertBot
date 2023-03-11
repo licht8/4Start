@@ -11,11 +11,11 @@
   sudo mkdir backup
 
 3) Скопируйте файлы сертификата и закрытый ключ в созданную директорию:
-  sudo cp cert.pem chain.pem privkey.pem backup/
+  sudo cp cert.pem chain.pem fullchain.pem privkey.pem backup/
 По умолчанию сертификаты Certbot располагаются в файлах cert.pem и chain.pem, а закрытый ключ - в файле privkey.pem.
 
 4) Убедитесь, что резервная копия создана успешно, проверив содержимое директории backup:
   ls backup/
-Вы должны увидеть три файла: cert.pem, chain.pem и privkey.pem.
+Вы должны увидеть 4 файла: cert.pem, chain.pem и privkey.pem, fullchain.pem
 
 Теперь у вас есть резервная копия сертификата, которую можно использовать для восстановления безопасного соединения с вашим сайтом в случае необходимости.
