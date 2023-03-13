@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+#copyright licht8 v.0.1.4
 
 # Check OS version
 if ! grep -qiE "fedora|centos" /etc/*release; then
