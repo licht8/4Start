@@ -93,3 +93,4 @@ echo "Your database's data"
 echo "Database: ${database}"
 echo "User: " ${db_user}
 echo "User's Password: ${db_user_pass}"
+
