@@ -1,6 +1,12 @@
 #!/bin/bash
 #
 # Copyright licht8 v.0.1.7
+#
+# Some hints for this script:
+# https://stackoverflow.com/questions/24270733/automate-mysql-secure-installation-with-echo-command-via-a-shell-script
+# https://linuxconfig.org/install-wordpress-on-redhat-8
+# https://www.8host.com/blog/sozdanie-samopodpisannogo-ssl-sertifikata-dlya-apache-v-centos-8/
+# https://infoit.com.ua/linux/kak-ustanovit-stek-lamp-na-centos-8/
 
 # Find the IP address of the server
 ip_address=$(ip a | awk '/inet / && !/127.0.0.1/ {split($2,a,"/"); print a[1]}')
